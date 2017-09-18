@@ -26,13 +26,13 @@
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script>
 
-    var width = 500,
-            height = 500;
+    var width = 700,
+            height = 700;
 
     //创建tree
     var tree = d3.layout.tree()
-            .size([width, height-200])
-            .separation(function(a, b) { return (a.parent == b.parent ? 1 : 2); });
+            .size([width-100, height-100])
+            .separation(function(a, b) { return (a.parent == b.parent ? 1 :2); });//子节点是两倍距离
 
     //创建一个对角线生成器： 贝塞尔曲线
     var diagonal = d3.svg.diagonal()
